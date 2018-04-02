@@ -1,0 +1,13 @@
+Note:
+    1. getWordlist.java is to require file path and build dictionary using class in readfile.java;
+    2. readFile.java is a class that will build and return dictionary from the given file;
+    3. inquireWords.java is to require 2 words from the user.
+    4. buildLadder.java is a class that is used to build word ladder between given words;
+    5. userInterface.java is the main class that uses above classes.
+
+    This is the 3rd version, which executes in satisfactory speed with a more friendly interface and using Maven and Junit.
+
+*Spring boot version:
+    Please input a URL in the following URI form:
+        http://localhost:8080/wordsladder/?word1=firstword&word2=secondword
+    where firstword and secondword are defined by the user.
