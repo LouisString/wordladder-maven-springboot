@@ -17,6 +17,10 @@ public class WordsLadderController {
         Map word_list = getWordlist.getDictionatyForWeb();
         String message = "";
         boolean invalid = false;
+        if (word1 == "" || word2 == ""){
+            message += "Word should not be empty.";
+            return message;
+        }
         if (!word_list.containsKey(word1)){
             message += "Word 1 is not in the dictionary. ";
             invalid = true;
