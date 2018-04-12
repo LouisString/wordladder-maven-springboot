@@ -1,5 +1,5 @@
 
-import com.light.springboot.controller.inquireWords;
+import com.light.springboot.utils.inquireWords;
 import org.junit.Test;
 import org.junit.Before; 
 import org.junit.After;
