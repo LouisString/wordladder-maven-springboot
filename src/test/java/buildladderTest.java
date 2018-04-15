@@ -1,5 +1,5 @@
 
-import com.light.springboot.controller.buildLadder;
+import com.light.springboot.utils.buildLadder;
 import org.junit.Test;
 import org.junit.Before; 
 import org.junit.After;

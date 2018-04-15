@@ -1,4 +1,4 @@
-package com.light.springboot.controller;
+package com.light.springboot.utils;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ public class userInterface {
         boolean want_more = true;
         String ans;
         Scanner scanner;
-        Map word_list = com.light.springboot.controller.getWordlist.getDictionaty();
+        Map word_list = getWordlist.getDictionaty();
         List<String> words;
         String word1, word2;
 
