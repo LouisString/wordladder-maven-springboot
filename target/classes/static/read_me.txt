@@ -20,4 +20,7 @@
         http://localhost:8080/wordsladder/?usn=username&word1=firstword&word2=secondword
     to get the ladder.
 
-    After login, the user has 5 minutes long
+    After login, if the user doesn't require to build a ladder in 5 minutes (300 seconds),
+    his/her login status will be discarded, which means he/she has to relogin. However,
+    if he/she requires it, then his/her login status will be renewed and 5 minutes' life
+    circle starts over again.

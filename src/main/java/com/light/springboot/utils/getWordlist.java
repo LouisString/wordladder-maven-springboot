@@ -31,7 +31,7 @@ public class getWordlist {
         }
 
         if (get_path){
-            filePath = "dictionary.txt";
+            filePath = "/dictionary.txt";
             readFile file = new readFile();
             word_list = file.readTxtFile(filePath);
         }
@@ -54,8 +54,8 @@ public class getWordlist {
     }
 
     public static Map getDictionatyForWeb(){
-
-        String filePath= "dictionary.txt";
+        //idea 会认为 “static/dictionary.txt” 是正确路径，但其实是错的
+        String filePath= "/dictionary.txt";
         Map word_list = new HashMap();
         readFile file = new readFile();
         word_list = file.readTxtFile(filePath);

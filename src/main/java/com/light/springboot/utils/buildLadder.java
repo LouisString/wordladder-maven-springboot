@@ -151,7 +151,7 @@ public class buildLadder {
                         if (!used_words.contains(changed_word)){
                             used_words.add(changed_word);
                             if (changed_word.equals(word2)){
-                                message = "\nA ladder from "+word1+" to "+word2+" is: \n";
+                                message = "A ladder from "+word1+" to "+word2+" is: \n";
                                 while (!word_ladder.isEmpty()){
                                    message += word_ladder.pop() + " ";
                                 }
