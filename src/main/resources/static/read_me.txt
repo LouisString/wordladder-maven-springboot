@@ -15,13 +15,11 @@
     Users are permitted to flip between friendly pages through buttons without bothering to input URLs.
     To access to
         1)index.html, which is the home page, needs no permission;
-        2)login.html, where user can input username "sun" and password "moon" to log in as USER, needs no permission;
-        3)wordladder.html and user.html, you must have been logged in, any trial to access to them before getting the
+        2)login.html, where user can input username "sun" and password "moon" to log in as USER, needs no permission,
+            if he/she gives the expected information, then he/she is granted the USER permission;
+        3)wordladder.html and user.html, users must have been logged in, any trial to access to them before getting the
         USER permission will lead you back to login.html;
 
-        p.s. header.html is a inner html inserted into all the htmls above. I user the knowledge of 
+        p.s. header.html is a inner html inserted into all the htmls above based on Thymeleaf mechanism.
 
-    After login, if the user doesn't require to build a ladder in 5 minutes (300 seconds),
-    his/her login status will be discarded, which means he/she has to relogin. However,
-    if he/she requires it, then his/her login status will be renewed and 5 minutes' life
-    circle starts over again.
+    After login, if the user doesn't act any motion, then sometime later he/she needs to login again.
