@@ -127,8 +127,14 @@ public class WordsLadderController {
                 buildLadder process = new buildLadder();
                 message = process.find_ladder_for_web(word1, word2, word_list);
                 String[] splitstr=message.split(":");
-                messages.add(splitstr[0]+':');
-                messages.add(splitstr[1]);
+                if (splitstr.length == 1){
+                    messages.add(message);
+                }
+                else{
+                    messages.add(splitstr[0]+':');
+                    messages.add(splitstr[1]);
+                }
+
             }
             ModelAndView mav = new ModelAndView("wordladder");
             mav.addObject("messages", messages);
