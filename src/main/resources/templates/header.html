@@ -22,8 +22,8 @@
                     <li>
                 </ul>
                 <div class="navbar-form navbar-right">
-                    <a class="btn btn-danger" th:href="@{/user}" th:if="${#httpServletRequest.remoteUser}">My center</a>
-                    <a class="btn btn-success" th:href="@{/login}" th:unless="${#httpServletRequest.remoteUser}">Login</a>
+                    <a class="btn btn-danger" th:href="@{/user}" th:if="${#httpServletRequest.getCookies()}">My center</a>
+                    <a class="btn btn-success" th:href="@{/login}" th:unless="${#httpServletRequest.getCookies()}">Login</a>
                 </div>
             </div>
         </div>

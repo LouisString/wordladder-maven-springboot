@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Login</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" />
+    <script src="/js/jquery-3.3.1.min.js"></script>
 </head>
 
 <body style="background-color: #f1f1f1; padding-bottom: 0">
@@ -19,7 +20,7 @@
                     <h3 class="panel-title">Login</h3>
                 </div>
                 <div class="panel-body">
-                    <form th:action="@{/login}" method="post">
+                    <form id="form1" name="form1" action="http://localhost:8082/login" method="post" >
                         <div class="form-group" style="margin-top: 30px">
                             <div class="input-group col-md-6 col-md-offset-3">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
@@ -34,15 +35,12 @@
                             </div>
                         </div>
                         <br>
-                        <div th:if="${param.error}">
-                            <p style="text-align: center" class="text-danger">Wrong username or password!</p>
-                        </div>
-                        <div th:if="${result}">
-                            <p style="text-align: center" class="text-success" th:text="${result}"></p>
+                        <div th:each="message : ${messages}">
+                            <p style="text-align: center" class="text-danger" th:text="${message}"></p>
                         </div>
                         <div class="form-group">
                             <div class="input-group col-md-6 col-md-offset-3 col-xs-12 ">
-                                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                                <button id="btn1" type="submit" class="btn btn-primary btn-block">Sign In</button>
                             </div>
                         </div>
                         <div class="form-group">
@@ -59,6 +57,25 @@
 </div>
 
 </body>
+<script type="text/javascript">
+    function postAjax(){
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:8082/login',
+            data:{
+                username:document.getElementById("username").innerText,
+                password:document.getElementById("password").innerText
+            },
+            success: function(data){
+                alert(data);
+            }
+        })
 
+    }
+    function postAjax2(){
+
+        console.log($("#form2").serialize());
+    }
+</script>
 
 </html>
